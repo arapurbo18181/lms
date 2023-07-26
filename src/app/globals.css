@@ -2,26 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* img.vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+} */
+img.vert-move {
+    -webkit-animation: mover 4s infinite  alternate;
+    animation: mover 4s infinite  alternate;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@-webkit-keyframes mover {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(30px); }
+    0% { transform: translateX(0); }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes mover {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(30px); }
+    0% { transform: translateX(0); }
 }
